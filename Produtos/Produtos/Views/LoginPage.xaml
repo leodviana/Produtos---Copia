@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Produtos.Views.LoginPage"
+             Title="Login"
+             BackgroundColor="{StaticResource MainColor}">
+    
+    <StackLayout Padding="10" Spacing="20">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label
+              Text="E-Commerce" 
+              FontSize="24"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 TextColor="{StaticResource AccentColor1}" >
+
+            </Label>
+            <Image
+                Source="ic_launcher.png"
+                WidthRequest="70"  
+                HeightRequest="70"  
+                HorizontalOptions="Center">
+
+            </Image>
+        </StackLayout>
+        <BoxView HeightRequest="3" Color="{StaticResource AccentColor1}"></BoxView>
+         <Entry Placeholder="Usuario" TextColor="{StaticResource BackgroundColor}"></Entry>
+        <Entry Placeholder="Senha" TextColor="{StaticResource BackgroundColor}" IsPassword="True"></Entry>
+        <Button Text="Entrar" TextColor="{StaticResource AccentColor1}" HorizontalOptions="FillAndExpand" VerticalOptions="Center"></Button>
+        <StackLayout Orientation="Horizontal">
+            <Label
+              Text="Lembrar-me" 
+              TextColor="{StaticResource BackgroundColor}"
+                FontSize="18"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="Center">
+                
+            </Label>
+            <Switch
+               HorizontalOptions="End"
+                VerticalOptions="Center">  
+                
+            </Switch>
+        </StackLayout>
+        <Label
+              Text="Recuperar Senha " 
+              TextColor="{StaticResource AccentColor1}"
+                FontSize="18"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+
+        </Label>
+    </StackLayout>
+  
+</ContentPage>
