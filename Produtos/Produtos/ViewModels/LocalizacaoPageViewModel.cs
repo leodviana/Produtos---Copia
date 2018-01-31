@@ -65,9 +65,10 @@ namespace Produtos.ViewModels
             var locator = CrossGeolocator.Current;
             locator.DesiredAccuracy = 50;
 
-            var location = await locator.GetPositionAsync(TimeSpan.FromMilliseconds(10000));
-            var position = new Position(-3.729680, -38.508561);
-            MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(position,Distance.FromMiles(0.3)));
+            //var location = await locator.GetPositionAsync(TimeSpan.FromSeconds(20), null, true);
+            var location = await locator.GetPositionAsync();
+            var position = new Position(location.Latitude,location.Longitude);
+            MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(position,Distance.FromKilometers(.3)));
         }
     }
 }

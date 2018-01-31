@@ -8,6 +8,7 @@
              Title="Localizador">
 
     <maps:Map 
+    
     WidthRequest="320" 
     HeightRequest="200"
     x:Name="MyMap"
