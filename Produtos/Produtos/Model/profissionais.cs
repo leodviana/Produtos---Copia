@@ -16,7 +16,9 @@ namespace Produtos.Model
 
         public double longitude { get; set; }
 
-        public double latitude { get; set }
+        public double latitude { get; set; }
+
+        public string bairro { get; set; }
 
     }
 }
