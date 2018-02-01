@@ -14,6 +14,9 @@ namespace Produtos.Model
 
         public string Foto { get; set; }
 
+        public double longitude { get; set; }
+
+        public double latitude { get; set }
 
     }
 }
