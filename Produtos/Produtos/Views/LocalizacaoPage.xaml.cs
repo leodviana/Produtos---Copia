@@ -10,12 +10,12 @@ namespace Produtos.Views
         public LocalizacaoPage()
         {
             InitializeComponent();
-            //MyMap = LocalizacaoPageViewModel.MyMap;
+            LocalizacaoPageViewModel.MyMap =MyMap ;
           //  getLocations();
 
         }
 
-        private async void getLocations()
+       /* private async void getLocations()
         {
             var locator = CrossGeolocator.Current;
             locator.DesiredAccuracy = 50;
@@ -24,6 +24,6 @@ namespace Produtos.Views
             var location = await locator.GetPositionAsync();
             var position = new Position(location.Latitude, location.Longitude);
             MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromKilometers(.3)));
-        }
+        }*/
     }
 }

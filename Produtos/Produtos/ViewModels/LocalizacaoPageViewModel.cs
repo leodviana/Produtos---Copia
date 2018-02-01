@@ -17,14 +17,7 @@ namespace Produtos.ViewModels
         {
             MyMap = new Map();
             Pins = new ObservableCollection<Pin>();
-            GetGeolocation();
-            foreach (Pin item in Pins)
-            {
-                MyMap.Pins.Add(item);
-            }
-
             Locator();
-
         }
         public void GetGeolocation()
         {
@@ -69,6 +62,11 @@ namespace Produtos.ViewModels
             var location = await locator.GetPositionAsync();
             var position = new Position(location.Latitude,location.Longitude);
             MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(position,Distance.FromKilometers(.3)));
+            GetGeolocation();
+            foreach (Pin item in Pins)
+            {
+                MyMap.Pins.Add(item);
+            }
         }
     }
 }
